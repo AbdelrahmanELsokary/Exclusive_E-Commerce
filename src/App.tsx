@@ -1,17 +1,17 @@
 import './App.css';
-import { BrowserRouter } from 'react-router';
+import { BrowserRouter, Route } from 'react-router';
 import { Routes } from 'react-router';
 import { PageLayout } from './components/layout/PageLayout';
 
-
-// import PageLayout from './components/layout/Banner';
 function App() {
   return (
     <>
       <BrowserRouter>
-        {/* <Banner /> */}
-        <PageLayout />
-        <Routes></Routes>
+        <Routes>
+          <Route element={<PageLayout />}>
+            <Route element={<p>klurf</p>} path="/" />
+          </Route>
+        </Routes>
       </BrowserRouter>
     </>
   );

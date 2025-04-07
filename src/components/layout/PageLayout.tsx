@@ -1,7 +1,7 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Banner } from './Banner';
 import { Outlet } from 'react-router';
+import { Banner } from './Banner';
+import { useState } from 'react';
 export function PageLayout() {
   const { i18n } = useTranslation();
   const [local, setLocal] = useState(localStorage.getItem('i18nextLng') || 'en');
