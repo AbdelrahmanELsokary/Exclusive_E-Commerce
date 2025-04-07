@@ -1,15 +1,18 @@
 import './App.css';
 import { BrowserRouter } from 'react-router';
 import { Routes } from 'react-router';
+import { PageLayout } from './components/layout/PageLayout';
 
-import { Header } from './components/layout/Header';
+
+// import PageLayout from './components/layout/Banner';
 function App() {
   return (
     <>
       <BrowserRouter>
+        {/* <Banner /> */}
+        <PageLayout />
         <Routes></Routes>
       </BrowserRouter>
-      <Header />
     </>
   );
 }
