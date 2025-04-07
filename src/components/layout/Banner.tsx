@@ -8,6 +8,8 @@ interface BannerProps {
 
 export function Banner({ local, changeLanguage }: BannerProps) {
   const { t } = useTranslation();
+  console.log(local);
+  
   return (
     <>
       <div className="banner bg-black text-white text-[14px]">
@@ -16,7 +18,7 @@ export function Banner({ local, changeLanguage }: BannerProps) {
           <Link to="/" className="font-semibold pl-2">
             {t('shopNow')}
           </Link>
-          <select defaultValue={local} onChange={(e) => changeLanguage(e.target.value)} className="bg-black outline-none cursor-pointer px-8">
+          <select value={local} onChange={(e) => changeLanguage(e.target.value)} className="bg-black outline-none cursor-pointer px-8">
             <option value="en">English</option>
             <option value="ar">{local === 'en' ? 'Arabic' : 'العربية'}</option>
           </select>
