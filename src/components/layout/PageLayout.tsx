@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Outlet } from 'react-router';
 import { Banner } from './Banner';
 import { useState } from 'react';
+import { Header } from './Header';
 export function PageLayout() {
   const { i18n } = useTranslation();
   const [local, setLocal] = useState(localStorage.getItem('i18nextLng') || 'en');
@@ -22,6 +23,7 @@ export function PageLayout() {
     <>
       <div dir={local === 'en' ? 'ltr' : 'rtl'}>
         <Banner local={local} changeLanguage={changeLanguage} />
+        <Header />
         <Outlet />
       </div>
     </>

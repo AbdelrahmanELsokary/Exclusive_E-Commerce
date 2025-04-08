@@ -1,4 +1,4 @@
-import './App.css';
+import '../public/assets/styles/App.css';
 import { BrowserRouter, Route } from 'react-router';
 import { Routes } from 'react-router';
 import { PageLayout } from './components/layout/PageLayout';
@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<PageLayout />}>
-            <Route element={<p>klurf</p>} path="/" />
+            <Route path="/" />
           </Route>
         </Routes>
       </BrowserRouter>
