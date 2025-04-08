@@ -8,7 +8,6 @@ interface BannerProps {
 
 export function Banner({ local, changeLanguage }: BannerProps) {
   const { t } = useTranslation();
-  console.log(local);
   return (
     <>
       <div className="banner bg-black text-white text-[14px]">

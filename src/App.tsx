@@ -9,7 +9,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<PageLayout />}>
-            <Route path="/" />
+            <Route element={<p>home</p>} path="/" />
+            <Route element={<p>Contact</p>} path="/Contact" />
+            <Route element={<p>Contact</p>} path="/About" />
+            <Route element={<p>Contact</p>} path="/SignUp" />
           </Route>
         </Routes>
       </BrowserRouter>
