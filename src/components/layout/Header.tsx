@@ -58,31 +58,31 @@ export function Header() {
             <li>
               <Link className="flex items-center gap-2 py-3" to={'/'}>
                 <FiUser className="text-2xl" />
-                Manage My Account
+                {t('Manage My Account')}
               </Link>
             </li>
             <li>
               <Link className="flex items-center gap-2 py-3" to={'/'}>
                 <LuShoppingBag className="text-2xl" />
-                My Order
+                {t('My Order')}
               </Link>
             </li>
             <li>
               <Link className="flex items-center gap-2 py-3" to={'/'}>
                 <IoIosCloseCircleOutline className="text-2xl" />
-                My Cancellations
+                {t('My Cancellations')}
               </Link>
             </li>
             <li>
               <Link className="flex items-center gap-2 py-3" to={'/'}>
                 <FaRegStar className="text-2xl" />
-                My Reviews
+                {t('My Reviews')}
               </Link>
             </li>
             <li>
               <button type="button" className="flex items-center gap-2 py-3">
                 <TbLogout2 className="text-2xl" />
-                Logout
+                {t('Logout')}
               </button>
             </li>
           </ul>
