@@ -6,8 +6,8 @@ import { Link, NavLink } from 'react-router';
 import { FaRegStar } from 'react-icons/fa';
 import { TbLogout2 } from 'react-icons/tb';
 import { CiHeart } from 'react-icons/ci';
-import { FiUser } from 'react-icons/fi';
 import { MdMenu } from 'react-icons/md';
+import { FiUser } from 'react-icons/fi';
 import { useState } from 'react';
 
 export function Header() {
@@ -22,7 +22,7 @@ export function Header() {
   const [account, setAccount] = useState(false);
   return (
     <>
-      <header className="sticky top-0 border-b border-[#00000036] z-10 py-5">
+      <header className="sticky bg-white top-0 border-b border-[#00000036] z-10 py-5">
         <div className="container justify-around flex items-center gap-4 m-auto">
           <Link className="font-bold text-2xl tracking-[1px]" to={'/'}>
             {t('Exclusive')}

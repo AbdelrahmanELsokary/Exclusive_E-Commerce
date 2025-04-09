@@ -3,6 +3,7 @@ import { Outlet } from 'react-router';
 import { Banner } from './Banner';
 import { useState } from 'react';
 import { Header } from './Header';
+import { Footer } from './Footer';
 export function PageLayout() {
   const { i18n } = useTranslation();
   const [local, setLocal] = useState(localStorage.getItem('i18nextLng') || 'en');
@@ -25,6 +26,7 @@ export function PageLayout() {
         <Banner local={local} changeLanguage={changeLanguage} />
         <Header />
         <Outlet />
+        <Footer />
       </div>
     </>
   );
