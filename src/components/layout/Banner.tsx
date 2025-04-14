@@ -6,7 +6,7 @@ interface BannerProps {
   changeLanguage: (lang: string) => void;
 }
 
-export function Banner({ local, changeLanguage }: BannerProps) {
+export default function Banner({ local, changeLanguage }: BannerProps) {
   const { t } = useTranslation();
   return (
     <>

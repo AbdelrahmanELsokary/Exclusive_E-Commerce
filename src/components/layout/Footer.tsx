@@ -5,7 +5,7 @@ import { CiTwitter } from 'react-icons/ci';
 import { VscSend } from 'react-icons/vsc';
 import { Link } from 'react-router';
 
-export function Footer() {
+export default function Footer() {
   const { t } = useTranslation();
   return (
     <>
@@ -43,7 +43,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link className="block pt-3" to={'/'}>
+                <Link className="block pt-3" to={'/Login'}>
                   {t('Login / Register')}
                 </Link>
               </li>

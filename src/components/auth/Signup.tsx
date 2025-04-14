@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { FcGoogle } from 'react-icons/fc';
 import { toast } from 'react-toastify';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { useState } from 'react';
 
 interface User {
@@ -10,8 +10,9 @@ interface User {
   password: string;
 }
 
-export function SignUp() {
+export default function SignUp() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [formInputs, setFormInputs] = useState<User>({
     name: '',
     emailOrphon: '',
@@ -21,6 +22,7 @@ export function SignUp() {
     const storedUsers = localStorage.getItem('Users');
     return storedUsers ? JSON.parse(storedUsers) : [];
   });
+
   function handleSignUp(e: React.FormEvent) {
     e.preventDefault();
     const updatedUsers = [...users, formInputs];
@@ -32,6 +34,7 @@ export function SignUp() {
       emailOrphon: '',
       password: '',
     });
+    navigate('/Login');
   }
 
   return (
@@ -67,7 +70,7 @@ export function SignUp() {
               value={formInputs.password}
               onChange={(e) => setFormInputs({ ...formInputs, password: e.target.value })}
               required
-              min={8}
+              minLength={8}
               className="block w-full outline-none border-b border-[#00000066] pb-2 mt-9"
               placeholder={t('Password')}
               type="password"
@@ -79,7 +82,7 @@ export function SignUp() {
             </Link>
             <p className="flex items-center justify-center text-[#030202cf] gap-2.5 py-6">
               {t('Already have account?')}
-              <Link className="font-medium border-b border-[#00000066]" to="/Login">
+              <Link className="font-medium underline" to="/Login">
                 {t('Log in')}
               </Link>
             </p>

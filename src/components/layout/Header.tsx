@@ -10,7 +10,7 @@ import { MdMenu } from 'react-icons/md';
 import { FiUser } from 'react-icons/fi';
 import { useState } from 'react';
 
-export function Header() {
+export default function Header() {
   const { t } = useTranslation();
   const navLinks: { name: string; path: string }[] = [
     { name: t('Home'), path: '/' },
