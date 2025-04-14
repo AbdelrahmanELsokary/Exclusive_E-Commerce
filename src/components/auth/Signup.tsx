@@ -1,7 +1,7 @@
+import { Link, useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { FcGoogle } from 'react-icons/fc';
 import { toast } from 'react-toastify';
-import { Link, useNavigate } from 'react-router';
 import { useState } from 'react';
 
 interface User {
