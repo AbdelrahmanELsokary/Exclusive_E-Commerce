@@ -1,8 +1,9 @@
-import '../public/assets/styles/App.css';
-import { BrowserRouter, Route } from 'react-router';
-import { Routes } from 'react-router';
 import { PageLayout } from './components/layout/PageLayout';
+import { BrowserRouter, Route } from 'react-router';
 import { SignUp } from './components/auth/Signup';
+import { Login } from './components/auth/Login';
+import '../public/assets/styles/App.css';
+import { Routes } from 'react-router';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route element={<p>Contact</p>} path="/Contact" />
             <Route element={<p>Contact</p>} path="/About" />
             <Route element={<SignUp />} path="/SignUp" />
+            <Route element={<Login />} path=" /Login" />
           </Route>
         </Routes>
       </BrowserRouter>
