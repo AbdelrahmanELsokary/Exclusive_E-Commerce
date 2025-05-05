@@ -16,7 +16,7 @@ export default function Sidebar() {
   ];
   return (
     <>
-      <aside className="border-r-2 border-[#00000022] ml-22">
+      <aside className="border-r-2 py-7 border-[#00000022] ml-14">
         <ul className="pr-10">
           {sideLinks.map((link) => (
             <li key={link.name} className="my-5">
