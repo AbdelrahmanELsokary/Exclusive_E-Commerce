@@ -6,7 +6,6 @@ export default function Sidebar() {
   const sideLinks: { name: string; path: string }[] = [
     { name: t('Woman’s Fashion'), path: '/' },
     { name: t('Men’s Fashion'), path: '/' },
-    { name: t('Woman’s Fashion'), path: '/' },
     { name: t('Electronics'), path: '/' },
     { name: t('Home & Lifestyle'), path: '/' },
     { name: t('Medicine'), path: '/' },
