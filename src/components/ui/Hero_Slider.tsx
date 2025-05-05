@@ -1,3 +1,9 @@
+// import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+
+
+// import { Navigation, Pagination } from 'swiper/modules';
+
 export default function Hero_Slider() {
   const slidesImages = [
     { src: '/assets/images/slider.webp', alt: 'Image Description' },
