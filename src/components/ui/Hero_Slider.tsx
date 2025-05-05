@@ -1,24 +1,32 @@
-// import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-
-
-// import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 export default function Hero_Slider() {
-  const slidesImages = [
-    { src: '/assets/images/slider.webp', alt: 'Image Description' },
-    { src: '/assets/images/slider.webp', alt: 'Image Description' },
-    { src: '/assets/images/slider.webp', alt: 'Image Description' },
-  ];
   return (
-    <>
-      <div className="slider">
-        <div className="swap flex overflow-hidden gap-2">
-          {slidesImages.map((slide) => (
-            <img src={slide.src} alt={slide.alt} />
-          ))}
-        </div>
-      </div>
-    </>
+    <div className="w-[75%] mr-14">
+      <Swiper
+        modules={[Pagination, Autoplay, Navigation]}
+        spaceBetween={20}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        navigation
+        loop
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+      >
+        <SwiperSlide>
+          <img className="m-auto" src="assets/images/slide.webp" alt="Slide 1" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="assets/images/slide2.webp" alt="Slide 2" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="assets/images/slide3.webp" alt="Slide 3" />
+        </SwiperSlide>
+      </Swiper>
+    </div>
   );
 }
